@@ -1,1 +1,129 @@
 /* No CSS *//*# sourceMappingURL=main.css.map */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
+
+nav {font-family: 'Raleway', sans-serif; font-weight: 560;}
+
+.navbar-brand {color: rgb(43, 43, 43);}
+
+.nav-link {color: rgb(43, 43, 43);}
+
+.navbar-toggler {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    transition: .5s ease-in-out;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+    position: relative;
+}
+
+.navbar-toggler span {
+    margin: 0;
+    padding: 0;
+}
+
+.toggler-icon {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #d3531a;
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.middle-bar {
+    margin-top: 0px;
+}
+
+
+/* State when the navbar is collapsed */
+
+.navbar-toggler.collapsed .top-bar {
+    position: absolute;
+    top: 0px;
+    transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    position: absolute;
+    top: 8px;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    position: absolute;
+    top: 16px;
+    transform: rotate(0deg);
+}
+
+/* when navigation is clicked */
+
+.navbar-toggler .top-bar {
+    top: inherit;
+    transform: rotate(135deg);
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    top: inherit;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+    top: inherit;
+    transform: rotate(-135deg);
+}
+
+/* Color of 3 lines */
+
+.navbar-toggler.collapsed .toggler-icon {
+    background-color: rgb(43, 43, 43);
+}
+
+h1 {font-family: 'Raleway', sans-serif; font-weight: 600;
+font-size: 30px;
+}
+
+h2 {font-family: 'Raleway', sans-serif; font-weight: 600;
+    font-size: 20px;
+    }
+
+.calenderinfo p {font-family: 'Roboto', sans-serif;
+font-size: 10px;}
+
+body {background-color: rgb(240, 240, 240);}
+
+nav {background-color: rgb(255, 255, 255);}
+
+.projectbuttonimage {
+    position: relative;
+}
+
+.projectbuttonimage .typecontainer {
+    position: center;
+}
+
+.videocontainer {position: center
+    ;}
+
+p {font-family: 'Roboto', sans-serif;
+    font-size: 7px;}
+
+    .typecontainer {text-align: center;font-family: 'Raleway', sans-serif; font-weight: 600;
+        font-size: 15px; color: rgb(66, 66, 66); text-decoration: none;
+        }
+a{text-decoration: none;}
+
+h3 {font-size: 14px; font-style: italic; font-weight: 400;}
