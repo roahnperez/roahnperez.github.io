@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
+
+
+
+/* Start Navbar Animation CSS */
+
+.navbar-toggler {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transition: .5s ease-in-out;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+    position: relative;
+}
+
+.navbar-toggler span {
+    margin: 0;
+    padding: 0;
+}
+
+.toggler-icon {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #d3531a;
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.middle-bar {
+    margin-top: 0px;
+}
+
+/* State when the navbar is collapsed */
+
+.navbar-toggler.collapsed .top-bar {
+    position: absolute;
+    top: 0px;
+    transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    position: absolute;
+    top: 8px;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    position: absolute;
+    top: 16px;
+    transform: rotate(0deg);
+}
+
+/* when navigation is clicked */
+
+.navbar-toggler .top-bar {
+    top: inherit;
+    transform: rotate(135deg);
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    top: inherit;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+    top: inherit;
+    transform: rotate(-135deg);
+}
+
+/* Color of 3 lines */
+
+.navbar-toggler.collapsed .toggler-icon {
+    background-color: rgb(43, 43, 43);
+}
+
+/* End of Navbar Animation CSS */
+
+
+
+/* Start of Navbar Decoration */
+
+nav {
+    background-color: rgb(255, 255, 255);    
+    font-family: 'Raleway', sans-serif; 
+    font-weight: 560;
+    font-size: 20px;
+}
+
+nav div.container-fluid {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.navbar-brand {
+    color: rgb(43, 43, 43);
+    display: flex;
+    align-items: center;
+}
+
+nav img {
+    padding-right: 16px;
+}
+
+.typechild {
+    display: inline-block;
+    vertical-align: middle;
+}
+    
+.nav-link {
+    color: rgb(182, 182, 182);
+}
+
+.navbar-brand:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.current {
+    color: rgb(43, 43, 43);
+    font-weight: 700;
+}
+
+/* End of Navbar Decoration */
+
+
+
+/* Start of Project Button CSS */
+
+.projectbuttonimage {
+    position: relative;
+}
+
+.projectbuttonimage .img-fluid{
+    display: block;
+    width: 100%;
+    box-shadow: .25rem .25rem .25rem lightgrey;
+    opacity: 1;
+    transition: .5s ease;
+}
+
+.projectbuttonimage .typecontainer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+  
+}
+
+.projectbuttonimage:hover .typecontainer {
+    opacity: 1;
+}
+
+/*End of Project Button CSS */
+
+
+
+h1 {
+    font-family: 'Raleway', sans-serif; 
+    font-weight: 700;
+    font-size: 60px;
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif; 
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.calenderinfo p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: rgb(240, 240, 240);
+}
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    color: rgb(138, 138, 138);
+}
+
+h3 {
+    font-size: 14px; 
+    font-style: italic; 
+    font-weight: 400;
+}
+
+footer {
+    padding: 8px;
+}

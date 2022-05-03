@@ -1,15 +1,12 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
 
-nav {font-family: 'Raleway', sans-serif; font-weight: 560;}
 
-.navbar-brand {color: rgb(43, 43, 43);}
 
-.nav-link {color: rgb(43, 43, 43);}
+/* Start Navbar Animation CSS */
 
 .navbar-toggler {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     position: relative;
     transition: .5s ease-in-out;
 }
@@ -45,7 +42,6 @@ nav {font-family: 'Raleway', sans-serif; font-weight: 560;}
 .middle-bar {
     margin-top: 0px;
 }
-
 
 /* State when the navbar is collapsed */
 
@@ -92,38 +88,59 @@ nav {font-family: 'Raleway', sans-serif; font-weight: 560;}
     background-color: rgb(43, 43, 43);
 }
 
-h1 {font-family: 'Raleway', sans-serif; font-weight: 600;
-font-size: 30px;
-}
+/* End of Navbar Animation CSS */
 
-h2 {font-family: 'Raleway', sans-serif; font-weight: 600;
+
+
+/* Start of Navbar Decoration */
+
+nav {
+    background-color: rgb(255, 255, 255);    
+    font-family: 'Raleway', sans-serif; 
+    font-weight: 560;
     font-size: 20px;
-    }
-
-.calenderinfo p {font-family: 'Roboto', sans-serif;
-font-size: 10px;}
-
-body {background-color: rgb(240, 240, 240);}
-
-nav {background-color: rgb(255, 255, 255);}
-
-.projectbuttonimage {
-    position: relative;
 }
 
-.projectbuttonimage .typecontainer {
-    position: center;
+nav div.container-fluid {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
 }
 
-.videocontainer {position: center
-    ;}
+.navbar-brand {
+    color: rgb(43, 43, 43);
+    display: flex;
+    align-items: center;
+}
 
-p {font-family: 'Roboto', sans-serif;
-    font-size: 7px;}
+nav img {
+    padding-right: 16px;
+}
 
-    .typecontainer {text-align: center;font-family: 'Raleway', sans-serif; font-weight: 600;
-        font-size: 15px; color: rgb(66, 66, 66); text-decoration: none;
-        }
-a{text-decoration: none;}
+.typechild {
+    display: inline-block;
+    vertical-align: middle;
+}
+    
+.nav-link {
+    color: rgb(182, 182, 182);
+}
 
-h3 {font-size: 14px; font-style: italic; font-weight: 400;}
+.navbar-brand:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.current {
+    color: rgb(43, 43, 43);
+    font-weight: 700;
+}
+
+/* End of Navbar Decoration */
+
+body {
+    background-color: rgb(240, 240, 240);
+}
+
+footer {
+    padding: 8px;
+}
