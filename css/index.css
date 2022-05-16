@@ -1,146 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
-
-
-
-/* Start Navbar Animation CSS */
-
-.navbar-toggler {
-    width: 20px;
-    height: 20px;
-    position: relative;
-    transition: .5s ease-in-out;
-}
-
-.navbar-toggler,
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus {
-    outline: none;
-    box-shadow: none;
-    border: 0;
-    position: relative;
-}
-
-.navbar-toggler span {
-    margin: 0;
-    padding: 0;
-}
-
-.toggler-icon {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background: #d3531a;
-    border-radius: 1px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
-}
-
-.middle-bar {
-    margin-top: 0px;
-}
-
-/* State when the navbar is collapsed */
-
-.navbar-toggler.collapsed .top-bar {
-    position: absolute;
-    top: 0px;
-    transform: rotate(0deg);
-}
-
-.navbar-toggler.collapsed .middle-bar {
-    opacity: 1;
-    position: absolute;
-    top: 8px;
-    filter: alpha(opacity=100);
-}
-
-.navbar-toggler.collapsed .bottom-bar {
-    position: absolute;
-    top: 16px;
-    transform: rotate(0deg);
-}
-
-/* when navigation is clicked */
-
-.navbar-toggler .top-bar {
-    top: inherit;
-    transform: rotate(135deg);
-}
-
-.navbar-toggler .middle-bar {
-    opacity: 0;
-    top: inherit;
-    filter: alpha(opacity=0);
-}
-
-.navbar-toggler .bottom-bar {
-    top: inherit;
-    transform: rotate(-135deg);
-}
-
-/* Color of 3 lines */
-
-.navbar-toggler.collapsed .toggler-icon {
-    background-color: rgb(43, 43, 43);
-}
-
-/* End of Navbar Animation CSS */
-
-
-
-/* Start of Navbar Decoration */
-
-nav {
-    background-color: rgb(255, 255, 255);    
-    font-family: 'Raleway', sans-serif; 
-    font-weight: 560;
-    font-size: 20px;
-}
-
-nav div.container-fluid {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-}
-
-.navbar-brand {
-    color: rgb(43, 43, 43);
-    display: flex;
-    align-items: center;
-}
-
-nav img {
-    padding-right: 16px;
-}
-
-.typechild {
-    display: inline-block;
-    vertical-align: middle;
-}
-    
-.nav-link {
-    color: rgb(182, 182, 182);
-}
-
-.navbar-brand:hover {
-    text-decoration: none;
-    color: inherit;
-}
-
-.current {
-    color: rgb(43, 43, 43);
-    font-weight: 700;
-}
-
-/* End of Navbar Decoration */
-
-
-
 /* Start of Project Button CSS */
-
 .projectbuttonimage {
     position: relative;
 }
@@ -163,72 +21,85 @@ nav img {
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-  
 }
 
 .projectbuttonimage:hover .typecontainer {
     opacity: 1;
 }
-
 /*End of Project Button CSS */
-
-
 
 h1 {
     font-family: 'Raleway', sans-serif; 
     font-weight: 700;
-    font-size: 60px;
+    font-size: 50px;
 }
 
-h2 {
-    font-family: 'Raleway', sans-serif; 
-    font-weight: 600;
-    font-size: 30px;
+.content {
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
-.calenderinfo p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+/*Start of Fade in Animation*/
+.projecttype {
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
-body {
-    background-color: rgb(240, 240, 240);
-}
-p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 10px;
-    color: rgb(138, 138, 138);
+.one {
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
-h3 {
-    font-size: 14px; 
-    font-style: italic; 
-    font-weight: 400;
+.two {
+    opacity: 0;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: .25s;
 }
 
-footer {
-    padding: 8px;
+.three {
+    opacity: 0;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
 }
 
-.videocontainer {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.27198%;
-    padding-right: 4rem;
+.four {
+    opacity: 0;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: .75s;
+}
+
+.five {
+    opacity: 0;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+.six {
+    opacity: 0;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1.25s;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
     }
-
-.videocontainer iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    100% {
+        opacity: 1;
     }
+}
+/* End of Fade In Animation*/
 
-.videodescription h1{
-font-size: 50px;}
-
-.final {padding-bottom: 2rem;
-padding-top: 2rem;}
 

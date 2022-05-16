@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
 
-
-
 /* Start Navbar Animation CSS */
 
 .navbar-toggler {
@@ -90,14 +88,11 @@
 
 /* End of Navbar Animation CSS */
 
-
-
 /* Start of Navbar Decoration */
 
 nav {
     background-color: rgb(255, 255, 255);    
-    font-family: 'Raleway', sans-serif; 
-    font-weight: 560;
+    font-family: 'Raleway', sans-serif;
     font-size: 20px;
 }
 
@@ -135,6 +130,18 @@ nav img {
     font-weight: 700;
 }
 
+.typechild {
+    font-weight: 560;
+}
+
+.navlink {
+    font-weight: 700;
+}
+
+.current:hover {
+    color: inherit
+}
+
 /* End of Navbar Decoration */
 
 body {
@@ -144,3 +151,44 @@ body {
 footer {
     padding: 8px;
 }
+
+.footer p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    color: rgb(138, 138, 138);
+}
+
+/* Start of Nav Hover Animation*/
+
+.navlink {
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    color: rgb(182, 182, 182);
+    overflow: hidden;
+}
+
+.navlink {
+    /* Same as before */
+    background: linear-gradient(to right, rgb(43, 43, 43), rgb(43, 43, 43) 50%, rgb(182, 182, 182) 50%);
+}
+
+.navlink {
+    /* Same as before */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+}
+
+.navlink {
+    /* Same as before */
+    transition: background-position 275ms ease;
+}
+
+.navlink:hover {
+    background-position: 0 100%;
+}
+
+/* End of Nav Hover Animation*/

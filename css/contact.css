@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
+
+.content {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif; 
+    font-weight: 700;
+    font-size: 35pt;
+}
+    
+ h2 {
+    font-family: 'Raleway', sans-serif; 
+    font-weight: 600;
+    font-size: 20pt;
+}
+    
+h3 {
+    font-size: 15pt; 
+    font-style: italic; 
+    font-weight: 400;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12pt;
+}
+
+/*Start of Previous Button Animation*/
+.emailbutton {
+    position: relative;
+    display: inline-block;
+    color: rgb(182, 182, 182);
+    overflow: hidden;
+}
+
+.emailbutton {
+    /* Same as before */
+    background: linear-gradient(to right, rgb(229, 57, 53), rgb(229,57,53) 50%, rgb(43,43,43) 50%);
+}
+
+.emailbutton {
+    /* Same as before */
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    background-size: 200% 100%;
+    background-position: 100%;
+}
+
+.emailbutton {
+    /* Same as before */
+    transition: background-position 275ms ease-out;
+}
+
+.emailbutton:hover {
+    background-position: 0 100%;
+}
+
+.emailbutton {
+    -webkit-mask: url(../Images/Gmail\ Button.svg);
+    mask: url(../Images/Gmail\ Button.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+.emailbuttontype {
+    font-size: 20pt;
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+}
+
+/*Start of Previous Button Animation*/
+.linkedinbutton {
+    position: relative;
+    display: inline-block;
+    color: rgb(43, 43, 43);
+    overflow: hidden;
+}
+
+.linkedinbutton {
+    /* Same as before */
+    background: linear-gradient(to right, rgb(2, 136, 209), rgb(2,136,209) 50%, rgb(43,43,43) 50%);
+}
+
+.linkedinbutton {
+    /* Same as before */
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    background-size: 200% 100%;
+    background-position: 100%;
+}
+
+.linkedinbutton {
+    /* Same as before */
+    transition: background-position 275ms ease-out;
+}
+
+.linkedinbutton:hover {
+    background-position: 0 100%;
+}
+
+.linkedinbutton {
+    -webkit-mask: url(../Images/LinkedIn\ Button.svg);
+    mask: url(../Images/LinkedIn\ Button.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+.linkedinbuttontype {
+    font-size: 20pt;
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+}
+
+.contactbuttons {
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    height: 15%;
+}
+
+.content {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 992px) {
+
+    .aboutinfo {
+        padding-top: 1.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+
+    h2 {
+        font-size: 15pt;
+    }
+    h3 {
+        font-size: 12pt;
+    }
+    p {
+        font-size: 10pt;
+    }
+
+}
+
+.content {
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#topButton {
+    width: 40px;
+    height: 40px;
+    transition: opacity 0.35s ease-in-out;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 10px 10px 11px;
+    border-radius: 100%;
+    background-color: rgb(182, 182, 182);
+    opacity: 0;
+    display: inline-block;
+
+    background: linear-gradient(to left, rgb(182, 182, 182), rgb(182, 182, 182) 50%, rgb(43, 43, 43) 50%)right;
+    background-size: 200%;
+    transition: .25s ease-out;
+  }
+  
+  #topButton:hover {
+    background-position: left;
+  }
+
+  .topButtonarrow {
+      display: flex;
+      align-items: center;
+  }
