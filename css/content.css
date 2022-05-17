@@ -267,3 +267,12 @@ p {
 .tooltipblock:hover .tooltiptext {
     opacity: 1;
   }
+
+.easteregg {
+    text-decoration: none;
+    color: inherit;
+}
+
+.easteregg:hover {
+    color: inherit;
+}

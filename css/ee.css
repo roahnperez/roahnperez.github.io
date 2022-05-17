@@ -1,0 +1,98 @@
+.content {
+    text-align: center;
+    padding: 6rem;
+}
+
+h1 {
+    padding-bottom: 5rem;
+}
+
+.glen{
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+  }
+
+  .glen a{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+
+  .glen a:before,
+  .glen a:after{
+    position: absolute;
+    content: "CLICK OR DIE";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #d3531a;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  .glen a:before{
+    color: #fff;
+    background: #d3531a;
+    transform: rotateY(0deg) translateZ(25px);
+  }
+  .glen a:after{
+    color: #d3531a;
+    transform: rotateX(90deg) translateZ(25px);
+  }
+  .glen a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+  }
+
+  .back{
+    position: relative;
+    display: inline-flex;
+    width: 250px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+  }
+
+  .back a{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+
+  .back a:before,
+  .back a:after{
+    position: absolute;
+    content: "BACK TO PORTFOLIO";
+    height: 55px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #5195fc;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  .back a:before{
+    color: #fff;
+    background: #5195fc;
+    transform: rotateY(0deg) translateZ(25px);
+  }
+  .back a:after{
+    color: #5195fc;
+    transform: rotateX(90deg) translateZ(25px);
+  }
+  .back a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+  }
