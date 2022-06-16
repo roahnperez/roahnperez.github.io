@@ -47,7 +47,7 @@ h3 {
 .content {
     margin-left: 10%;
     margin-right: 10%;
-    }
+}
 
 p {
     font-family: 'Roboto', sans-serif;
@@ -213,16 +213,16 @@ p {
     background: linear-gradient(to left, rgb(182, 182, 182), rgb(182, 182, 182) 50%, rgb(43, 43, 43) 50%)right;
     background-size: 200%;
     transition: .25s ease-out;
-  }
+}
   
   #topButton:hover {
     background-position: left;
-  }
+}
 
   .topButtonarrow {
       display: flex;
       align-items: center;
-  }
+}
 
   .content {
     animation: fadeInAnimation ease 2s;
@@ -241,7 +241,7 @@ p {
 .tooltipblock {
     position: relative;
     display: inline-block;
-  }
+}
   
 .tooltipblock .tooltiptext {
     font-family: 'Roboto', sans-serif;
@@ -262,11 +262,37 @@ p {
     top: 110%;
     left: 10%;
     z-index: 1;
-  }
+}
   
 .tooltipblock:hover .tooltiptext {
     opacity: 1;
-  }
+}
+
+.process {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+}
+  
+.active, .collapsible:hover {
+    background-color: #555;
+}
+  
+.processcontent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .8s ease;
+}
 
 .easteregg {
     text-decoration: none;
@@ -276,3 +302,9 @@ p {
 .easteregg:hover {
     color: inherit;
 }
+
+#hide_process {
+    transform: translateY(-100%);
+}
+
+
