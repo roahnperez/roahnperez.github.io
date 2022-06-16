@@ -284,10 +284,6 @@ p {
     font-size: 15px;
 }
   
-.active, .collapsible:hover {
-    background-color: #555;
-}
-  
 .processcontent {
     max-height: 0;
     overflow: hidden;
