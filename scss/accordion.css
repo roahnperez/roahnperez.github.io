@@ -1,0 +1,97 @@
+.accordion .accordion-item {
+  border-width: 0px;
+  background-color: rgb(240, 240, 240);
+  align-items: center;
+}
+.accordion .accordion-item .accordion-collapse .accordion-body {
+  padding: 12px;
+}
+.accordion .accordion-item .accordion-header {
+  justify-items: center;
+  border-width: 0px;
+  transition: 0.5s ease;
+}
+.accordion .accordion-item .accordion-header .accordion-button {
+  background-color: rgb(240, 240, 240);
+  box-shadow: none;
+  width: 12%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  stroke-width: 500px;
+  transition: 0.5s ease;
+  white-space: nowrap;
+}
+.accordion .accordion-item .accordion-header .accordion-button .processbuttontype {
+  font-weight: 700;
+  color: rgb(182, 182, 182);
+  transition: 0.5s ease;
+}
+.accordion .accordion-item .accordion-header .accordion-button:hover .processbuttontype {
+  color: rgb(43, 43, 43);
+  transition: 0.5s ease;
+}
+.accordion .accordion-item .accordion-header .accordion-button:hover::after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' role='img' width='16' height='16' preserveAspectRatio='xMidYMid meet' stroke='rgb(43,43,43)' stroke-width='1' viewBox='0 0 24 24'><path fill='rgb(43,43,43' d='M3.515 8.465L12 16.95l8.485-8.485L19.07 7.05L12 14.122L4.929 7.05L3.515 8.465Z'/></svg>") !important;
+  transition: 0.5s ease;
+}
+.accordion .accordion-item .accordion-header .accordion-button::after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' role='img' width='16' height='16' preserveAspectRatio='xMidYMid meet' stroke='rgb(182,182,182)' stroke-width='1' viewBox='0 0 24 24'><path fill='rgb(182,182,182)' d='M3.515 8.465L12 16.95l8.485-8.485L19.07 7.05L12 14.122L4.929 7.05L3.515 8.465Z'/></svg>") !important;
+  transition: 0.5s ease;
+  margin: 3px;
+  position: relative;
+  left: 75px;
+}
+
+.accordion-collapse .accordion-body .processcontent .accordion-button {
+  background-color: rgb(240, 240, 240);
+  box-shadow: none;
+  width: 12%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  stroke-width: 500px;
+  transition: 0.5s ease;
+  white-space: nowrap;
+}
+.accordion-collapse .accordion-body .processcontent .accordion-button .processbuttontype {
+  font-weight: 700;
+  color: rgb(182, 182, 182);
+  transition: 0.5s ease;
+}
+.accordion-collapse .accordion-body .processcontent .accordion-button:hover .processbuttontype {
+  color: rgb(43, 43, 43);
+  transition: 0.5s ease;
+}
+.accordion-collapse .accordion-body .processcontent .accordion-button:hover::after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' role='img' width='16' height='16' preserveAspectRatio='xMidYMid meet' stroke='rgb(43,43,43)' stroke-width='1' viewBox='0 0 24 24'><path fill='rgb(43,43,43' d='M3.515 8.465L12 16.95l8.485-8.485L19.07 7.05L12 14.122L4.929 7.05L3.515 8.465Z'/></svg>") !important;
+  transition: 0.5s ease;
+}
+.accordion-collapse .accordion-body .processcontent .accordion-button::after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' role='img' width='16' height='16' preserveAspectRatio='xMidYMid meet' stroke='rgb(182,182,182)' stroke-width='1' viewBox='0 0 24 24'><path fill='rgb(182,182,182)' d='M3.515 8.465L12 16.95l8.485-8.485L19.07 7.05L12 14.122L4.929 7.05L3.515 8.465Z'/></svg>") !important;
+  transition: 0.5s ease;
+  margin: 3px;
+  position: relative;
+  left: 75px;
+}
+
+.process {
+  padding: 0px;
+}
+
+.processbuttontype {
+  position: absolute;
+  font-family: "Raleway", sans-serif;
+}
+
+[data-bs-toggle=collapse].collapsed .if-not-collapsed {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+[data-bs-toggle=collapse]:not(.collapsed) .if-collapsed {
+  opacity: 0;
+  transition: 0.5s ease;
+}/*# sourceMappingURL=accordion.css.map */

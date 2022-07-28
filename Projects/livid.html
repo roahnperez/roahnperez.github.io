@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/shared.css">
     <link rel="stylesheet" href="../css/content.css">
+    <link rel="stylesheet" href="../scss/accordion.css">
 
     <!---Title-->
     <title>Roahn Perez - Livid Animation</title>
@@ -54,36 +55,41 @@
     </nav>
     <!---End of Navigation-->
 
-<!---Start of Top Button JS-->
-<button onclick="topFunction()" id="topButton" class="justify-content-center" title="Go to top">
-  <div class="topButtonarrow">
-    <img src="../Images/Top Button Arrow.svg" alt="">
-  </div>
-</button>
-<script>
-  //Get the button
-  var mybutton = document.getElementById("topButton");
-
-  // When the user scrolls down 20px from the top of the document, show the button
-  window.onscroll = function () {
-    scrollFunction()
-  };
-
-  function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      document.getElementById("topButton").style.opacity = "1";
-    } else {
-      document.getElementById("topButton").style.opacity = "0"
-    }
-  }
-
-  // When the user clicks on the button, scroll to the top of the document
-  function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-</script>
-<!---End of Top Buton JS-->
+    <button onclick="topFunction()" id="topButton" class="justify-content-center" title="Go to top">
+      <div class="topButtonarrow">
+        <?xml version="1.0" encoding="utf-8"?>
+        <!-- Generator: Adobe Illustrator 26.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+        <svg version="1.1" id="topbutton" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 157.4 157.4" style="enable-background:new 0 0 157.4 157.4;" xml:space="preserve">
+          <circle id="topbuttoncircle" class="st0" cx="78.7" cy="78.7" r="78.7"/>
+          <polygon id="topbuttonarrow" class="st1" points="110,100.3 78.4,68.7 47.4,99.7 39.7,91.9 78.4,53.2 117.8,92.6 "/>
+        </svg>
+      </div>
+    </button>
+    
+    <script>
+      //Get the button
+      var mybutton = document.getElementById("topButton");
+    
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction()
+      };
+    
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("topButton").style.opacity = "1";
+        } else {
+          document.getElementById("topButton").style.opacity = "0"
+        }
+      }
+    
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
 
     <div class="content">
 
@@ -136,6 +142,8 @@
         </div>
         
       </div>
+
+      
   
     <!---Start of Page Buttons-->
   
