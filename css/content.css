@@ -12,15 +12,16 @@ h2 {
 }
 
 h3 {
-    font-size: 14px; 
+    font-size: 16px; 
     font-style: italic; 
-    font-weight: 400;
+    font-weight: 600;
 }
 
 h4 {
-    font-size: 12px;
+    font-size: 14px;
     font-style: italic;
     font-weight: 200;
+    margin: 0;
 }
 
 .carousel {
@@ -283,4 +284,67 @@ p {
 
 .easteregg:hover {
     color: inherit;
+}
+
+.process p{
+    padding-top: 1rem;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+.processvideos {
+    padding-top: 1rem;
+}
+
+.processimages {
+    padding-top: 1rem;
+    padding-bottom: .30rem;
+}
+
+.process h3 {
+    margin: 0;
+}
+
+.process h2 {
+    margin: 0;
+}
+
+.processtextstart {
+    padding-top: 1rem;
+}
+
+.storyboard {
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: .30rem;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.float {
+    float: right;
+}
+
+.processcontent h3 {
+    padding-top: 1rem;
+}
+
+.processcontent h2 {
+    padding-top: 1.5rem;
+}
+
+
+@media only screen and (min-width: 992px) {
+    .processcontentsmall {
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+}
+
+.processbeginning h2 {
+    padding: 0;
+}
+
+.processbeginning h1 {
+    margin: 0;
 }
