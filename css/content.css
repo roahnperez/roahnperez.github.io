@@ -52,14 +52,18 @@ h4 {
 }
 
 .content {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 p {
     font-family: 'Roboto', sans-serif;
     font-size: 12pt;
     padding-bottom: 1rem;
+}
+
+.prototypep {
+    padding: 0;
 }
 
 .typetogether {
@@ -70,6 +74,36 @@ p {
     padding-right: 0;
     height: 35px;
     padding-top: 10%;
+}
+
+.prototypebutton {
+  font-family: 'Raleway', sans-serif;
+  align-items: center;
+  background-color: rgb(182, 182, 182);
+  border: 0;
+  border-radius: 100px;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  transition: .5s ease;
+}
+
+.prototypebutton:hover{ 
+  background-color: rgb(43, 43, 43);
+  transition: .5s ease;
+  color: #ffffff;
 }
 
 .videocontainer {

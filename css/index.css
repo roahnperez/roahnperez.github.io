@@ -35,8 +35,8 @@ h1 {
 }
 
 .content {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 /*Start of Fade in Animation*/
@@ -90,6 +90,22 @@ h1 {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-delay: 1.25s;
+}
+
+.seven {
+    opacity: 0;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1.50s;
+}
+
+.eight {
+    opacity: 0;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1.75s;
 }
 
 @keyframes fadeInAnimation {

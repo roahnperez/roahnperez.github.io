@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+    <link rel="icon" href="../Images/favicon Logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/content.css">
+    <link rel="stylesheet" href="../scss/accordion.css">
+
+<!---Title-->
+
+    <title>Roahn Perez - RecyBin App</title>
+
+  </head>
+
+  <body>
+
+<!---Start of Navigation-->
+
+<nav class="navbar navbar-expand-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../index.html"> 
+      <div class="logo">
+        <img src="../Images/Logo.png" alt="Logo" height="70px">
+        <div class="typechild">
+          ROAHN PEREZ
+        </div>
+      </div>
+    </a>
+    <button class="navbar-toggler collapsed d-flex d-sm-none flex-column justify-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="toggler-icon top-bar"></span>
+      <span class="toggler-icon middle-bar"></span>
+      <span class="toggler-icon bottom-bar"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item ms-auto">
+          <a class="nav-link navlink" href="../index.html">
+            PROJECTS
+          </a>
+        </li>
+        <li class="nav-item ms-auto navlink">
+          <a class="nav-link" href="../contact.html">
+            CONTACT
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!---End of Navigation-->
+
+<!---Start of Top Button JS-->
+<button onclick="topFunction()" id="topButton" class="justify-content-center" title="Go to top">
+  <div class="topButtonarrow">
+    <?xml version="1.0" encoding="utf-8"?>
+    <!-- Generator: Adobe Illustrator 26.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+    <svg version="1.1" id="topbutton" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	    viewBox="0 0 157.4 157.4" style="enable-background:new 0 0 157.4 157.4;" xml:space="preserve">
+      <circle id="topbuttoncircle" class="st0" cx="78.7" cy="78.7" r="78.7"/>
+      <polygon id="topbuttonarrow" class="st1" points="110,100.3 78.4,68.7 47.4,99.7 39.7,91.9 78.4,53.2 117.8,92.6 "/>
+    </svg>
+  </div>
+</button>
+
+<script>
+  //Get the button
+  var mybutton = document.getElementById("topButton");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function () {
+    scrollFunction()
+  };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("topButton").style.opacity = "1";
+    } else {
+      document.getElementById("topButton").style.opacity = "0"
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+<!---End of Top Buton JS-->
+
+<!---Start of Project Info-->
+
+<div class="content">
+
+  <div class="projectinfo mt-5 row">
+    <div class="type col-12 col-sm-9 col-md-8 col-lg-5 col-xl-4">
+      <h1>
+        RECYBIN
+      </h1>
+      <h2>
+        OBJECTIVE
+      </h2>
+      <p>
+        Come up with a common problem. Design an app and accompanying product that solves the common problem. This involves conducting research in other UX/UI experiences and developing an original Site Map, Journey Map, Wireframes, Personas, Design Brief, and Adobe Xd Protoype with transition animations.    
+      </p>
+      <h2>
+        SOFTWARE
+      </h2>
+      <div class="tooltipblock">
+        <img class="softwaresymbol" src="../Images/Xd Icon.svg" alt="">
+        <span class="tooltiptext">
+          ADOBE XD
+        </span>
+      </div>
+      <div class="tooltipblock pb-4">
+        <img class="softwaresymbol" src="../Images/Illustrator.svg" alt=""/>
+        <span class="tooltiptext">
+            ADOBE ILLUSTRATOR
+        </span>
+      </div>
+      <div class="tooltipblock">
+        <img class="softwaresymbol" src="../Images/Blender Icon.svg" alt=""/>
+        <span class="tooltiptext">
+          BLENDER
+        </span>
+      </div>
+      <h2>
+        APP PROTOTYPE
+      </h2>
+      <p class="prototypep">
+        Click the buttons below to see the RecyBin App prototype and Behance presentation.
+      </p>
+      <div>
+        <a class="prototypebutton" href="https://xd.adobe.com/view/2c1d8c04-0193-4ef9-a705-c6af1ef2676f-794e/?fullscreen" target="_blank">PROTOTYPE</a>
+        <a class="prototypebutton" href="https://www.behance.net/gallery/143046099/RecyBin-FInal" target="_blank">BEHANCE</a>
+      </div>
+        
+        
+    </div>
+
+    <div class="col-0 col-lg-1"></div>
+
+    <div class="carouseldiv container-fluid slide mb-4 col-12 col-lg-6 col-xl-7">
+      <div class="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="false" data-bs-interval="false">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../Images/Project Buttons/RecyBin Button.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../Images/RecyBin Mock Up 2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../Images/RecyBin Mock Up 3.png" class="d-block w-100" alt="...">
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <img src="../Images/Button Test.svg" height="10%" alt="">
+              <span class="visually-hidden">
+                Previous
+              </span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <img src="../Images/Right Carousel Button.svg" height="10%" alt="">
+              <span class="visually-hidden">
+                Next
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  
+
+  <!---End of Project Info-->
+
+
+
+  <!---Start of Page Buttons-->
+
+  <div class="pagebuttons row mb-4 mt-4">
+
+    <div class="col-4 col-sm-2 col-xxl-1">
+      <a href="democrat.html">
+        <div class="prevbutton container-fluid">
+          <div class="prevbuttontype">
+            LINK
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-4 col-sm-8 col-xxl-10"></div>
+
+    <div class="col-4 col-sm-2 col-xxl-1">
+      <a href="livid.html">
+        <div class="nextbutton container-fluid">
+          <div class="nextbuttontype">
+            LINK
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+  <!---End of Project Buttons-->
+
+</div>
+
+  <!---End of Page Buttons-->
+
+  <!---Start of Footer-->
+    <footer id="bottom">
+        <div class="container-fluid">
+          <div class="row footer">
+            <div class="col">
+              <p class="footertext text-center"> Copyright © <script>document.write(new Date().getFullYear())</script> 
+                Roahn Perez. All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+    </footer>
+  <!---End of Footer-->
+
+  <script>
+    $(".prevbutton").click(function() {
+    window.location = $(this).find("a").attr("href"); 
+    return false;
+    });
+  </script>
+
+
+
+  <!---Separate Popper and Bootstrap JS--->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  
+  </body>
+
+</html>
