@@ -32,10 +32,12 @@
                 .processbuttontype{
                     color: rgb(43,43,43);
                     transition: .5s ease;
+                    
                 }
                     &::after {
                         background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' role='img' width='16' height='16' preserveAspectRatio='xMidYMid meet' stroke='rgb(43,43,43)' stroke-width='1' viewBox='0 0 24 24'><path fill='rgb(43,43,43' d='M3.515 8.465L12 16.95l8.485-8.485L19.07 7.05L12 14.122L4.929 7.05L3.515 8.465Z'/></svg>") !important;
                         transition: .5s ease;
+
                     }
 
             }
@@ -44,7 +46,7 @@
                 transition: .5s ease;
                 margin: 3px;
                 position: relative;
-                left: 75px;
+                left: 80px;
             }
             }
         }   
@@ -86,7 +88,7 @@
                         transition: .5s ease;
                         margin: 3px;
                         position: relative;
-                        left: 75px;
+                        left: 80px;
                     }
             }
         }
