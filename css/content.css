@@ -3,22 +3,24 @@ h1 {
     font-weight: 700;
     font-size: 35pt;
     padding-bottom: 1rem;
+    color: black;
 }
 
 h2 {
     font-family: 'Raleway', sans-serif; 
     font-weight: 600;
-    font-size: 20pt;
+    font-size: 16pt;
 }
 
 h3 {
-    font-size: 16px; 
+    font-size: 14pt; 
     font-style: italic; 
     font-weight: 600;
+    color: #6e6e6e;
 }
 
 h4 {
-    font-size: 14px;
+    font-size: 8pt;
     font-style: italic;
     font-weight: 200;
     margin: 0;
@@ -52,6 +54,10 @@ h4 {
     margin-right: 5px;
 }
 
+video {
+    width: 100%;
+}
+
 .content {
     margin-left: 15%;
     margin-right: 15%;
@@ -59,7 +65,7 @@ h4 {
 
 p {
     font-family: 'Roboto', sans-serif;
-    font-size: 12pt;
+    font-size: 10pt;
     padding-bottom: 1rem;
 }
 
@@ -101,7 +107,37 @@ p {
   transition: .5s ease;
 }
 
+.websitebutton {
+  font-family: 'Raleway', sans-serif;
+  align-items: center;
+  background-color: rgb(182, 182, 182);
+  border: 0;
+  border-radius: 100px;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  transition: .5s ease;
+}
+
 .prototypebutton:hover{ 
+  background-color: rgb(43, 43, 43);
+  transition: .5s ease;
+  color: #ffffff;
+}
+
+.websitebutton:hover{ 
   background-color: rgb(43, 43, 43);
   transition: .5s ease;
   color: #ffffff;
@@ -370,9 +406,7 @@ p {
 
 
 @media only screen and (min-width: 992px) {
-    .processcontentsmall {
-    }
-}
+
 
 .processbeginning h2 {
     padding: 0;
@@ -385,4 +419,17 @@ p {
 .processcontentsmall {
     padding-left: 24%;
     padding-right: 24%;
+}
+}
+
+@media only screen and (min-width: 768px) {
+    .socialslide {
+        display: none
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .socialgrid {
+        display: none
+    }
 }
