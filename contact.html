@@ -20,42 +20,53 @@
 
   </head>
 
-
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    requestAnimationFrame(() => {
+      document.body.classList.add("page-enter");
+    });
+  });
+  </script>
 
   <body>
 
     <!---Start of Navigation-->
     <nav class="navbar navbar-expand-sm">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"> 
-          <div class="logo"> 
-            <img src="Images/Logo.png" alt="Logo" height="70px">
-            <div class="typechild">
-              ROAHN PEREZ
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"> 
+            <div class="logo"> 
+              <img src="Images/Logo.png" alt="Logo" height="70px">
+              <div class="typechild">
+                ROAHN PEREZ
+              </div>
             </div>
+          </a>
+          <button class="navbar-toggler collapsed d-flex d-sm-none flex-column justify-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="toggler-icon top-bar"></span>
+            <span class="toggler-icon middle-bar"></span>
+            <span class="toggler-icon bottom-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item ms-auto">
+                <a class="nav-link" href="projects.html">
+                    PROJECTS
+                </a>
+              </li>
+              <li class="nav-item ms-auto">
+                <a class="nav-link navlink" href="resume.html">
+                  RESUME
+                </a>
+              </li>
+              <li class="nav-item current ms-auto">
+                <a class="nav-link navlink" href="contact.html">
+                  ABOUT ME
+                </a>
+              </li>
+            </ul>
           </div>
-        </a>
-        <button class="navbar-toggler collapsed d-flex d-sm-none flex-column justify-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-          <span class="toggler-icon top-bar"></span>
-          <span class="toggler-icon middle-bar"></span>
-          <span class="toggler-icon bottom-bar"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item ms-auto">
-              <a class="nav-link navlink" href="index.html">
-                  PROJECTS
-              </a>
-            </li>
-            <li class="nav-item ms-auto">
-              <a class="nav-link current" href="contact.html">
-                CONTACT
-              </a>
-            </li>
-          </ul>
         </div>
-      </div>
-  </nav>
+    </nav>
     <!---End of Navigation-->
 
     <!---Start of Top Button JS-->
@@ -104,7 +115,7 @@
       </div>
       <div class="aboutinfo col-12 col-lg-5">
         <h2>ABOUT ME</h2>
-        <p>Hello! I am Roahn (Ro•un) Perez, a graphic designer and recent graduate from Cal Poly Pomona with a BFA in Visual Communication Design. I am passionte about motion graphics and illustration. I greatly value critique and utilize collaboration throughout my design process. I look forward to continue exploring new perspectives and problem solving throughout my future projects.</p>
+        <p>Hello! I am Roahn (Ro•un) Perez, a Design and Brand Specialist at Wonderfold, and gradiuate from Cal Poly Pomona with a BFA in Visual Communication Design. I am passionte about motion graphics and illustration. I greatly value critique and utilize collaboration throughout my design process. I look forward to continue exploring new perspectives and problem solving throughout my future projects.</p>
         <img class="img-fluid signature mb-4" src="Videos/Signature.gif" alt="">
         <h2>CONTACT</h2>
         <p>Contact me through email or LinkedIn and I will get back to you as soon as possible. Resume and Contract available upon request.</p>
@@ -139,5 +150,22 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
   
   </body>
+<script>
+      
+    document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default link navigation
 
+        // Add the exit animation to the body
+        document.body.classList.add('page-exit');
+
+        // Wait for the animation to finish, then navigate
+        setTimeout(() => {
+            window.location.href = this.href; // Navigate to the target page
+        }, 2000); // Match this to the duration of your transition (1.5s)
+    });
+});
+
+
+</script>
 </html>

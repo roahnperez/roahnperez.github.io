@@ -1,0 +1,251 @@
+:root {
+  --gap: 1rem;
+}
+
+body {
+  font-family: sans-serif;
+  
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;  /* Horizontally center */
+  align-items: center;      /* Vertically center (if needed) */
+  margin-top: 1.5rem;
+}
+
+.rounded-button {
+  font-family: 'Roboto', sans-serif;
+  color: #5a5a5a;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  border: 1.5px solid #5a5a5a;
+  border-radius: 999px;
+  background-color: rgb(240, 240, 240);
+  display: inline-flex;         /* Added inline-flex for text to stay in one line */
+  align-items: center;          /* Vertically centers text inside the button */
+  justify-content: center;      /* Horizontally centers text inside the button */
+  width: auto;          
+  transition: .5s ease;        /* Allow width to adjust based on content */
+}
+
+.rounded-button:hover {
+  color: #fff;
+  border: 1.5px solid transparent;
+  background-color: #949494;
+  font-weight: 600;
+  transition: .5s ease;
+}
+
+h2 {
+    font-family: "Raleway", sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+}
+
+.label {
+    font-family: 'Roboto', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: #000000;
+      text-transform: uppercase;
+}
+
+.grid {
+    
+  margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap);
+
+     animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}
+
+/* Aspect Ratios */
+.square {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-1099-618 {
+  aspect-ratio: 618 / 1099;
+}
+
+/* Box styling for images */
+.box {
+  background-size: cover;      /* Ensure images cover the entire area */
+  background-position: center; /* Center the image */
+  width: 100%;
+}
+
+/* Section images */
+
+.section-2 .box {
+  background-image: url('/Images/Superman/Superman\ 1.jpg'); /* Update with the image path */
+}
+
+.full1 .box {
+  background-image: url('/Images/Superman/Superman\ 2.jpg'); /* Update with the image path */
+}
+
+.full3 .box {
+  background-image: url('/Images/Superman/Superman\ 6.jpg'); /* Update with the image path */
+}
+
+.play-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000; /* Optional: background color to make it stand out */
+}
+
+.third1 .box {
+  background-image: url('/Images/Superman/Superman\ 3.jpg'); /* Update with the image path */
+}
+
+.third2 .box {
+  background-image: url('/Images/Superman/Superman\ 4.jpg'); /* Update with the image path */
+}
+
+.third3 .box {
+  background-image: url('/Images/Superman/Superman\ 5.jpg'); /* Update with the image path */
+}
+
+.social1 {
+  background-image: url('/Images/Superman/Superman\ 7.jpg'); /* Update with the image path */
+}
+
+.social2 {
+  background-image: url('/Images/Superman/Superman\ 8.jpg'); /* Update with the image path */
+}
+
+/* Aspect ratios for images */
+.square {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-9-16 {
+  aspect-ratio: 9 / 16;
+}
+
+/* Layout Sizing */
+.section-1 {
+  grid-column: span 4;
+}
+
+.section-2 {
+  grid-column: span 8;
+}
+
+.full-width {
+  grid-column: span 12;
+}
+
+.third {
+  grid-column: span 4;
+}
+
+.half {
+  grid-column: span 6;
+}
+
+
+
+/* Content box in section-1 */
+.content-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Labels */
+.label {
+  margin: 0.75rem 0 0.25rem;
+  font-weight: bold;
+  color: #666;
+}
+
+/* Button */
+.button-wrapper {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.outline-btn {
+  padding: 0.75rem 2rem;
+  border: 2px solid #000;
+  border-radius: 2rem;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Play Icon */
+.play-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-icon {
+  width: 50px;
+  height: 50px;
+  background: white;
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+}
+
+/* Responsive */
+@media (max-width:1250px) {
+
+.content-box{
+    padding-right: none;
+}
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-1,
+  .section-2,
+  .full-width,
+  .third, 
+  .half{
+    grid-column: span 1 !important;
+  }
+}
+
+.pagebuttons {
+  margin-left: 15% !important; 
+  margin-right: 15% !important; 
+}

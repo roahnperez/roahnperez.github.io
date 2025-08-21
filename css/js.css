@@ -1,0 +1,101 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(240, 240, 240);
+  overflow-y: hidden; /* prevent side scroll during animation */
+}
+
+
+#container3D, #container3D canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 1;
+  background: transparent !important;
+}
+
+/* Button Container */
+.button-container {
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 99;
+}
+
+.button-container.visible {
+  opacity: 1;
+}
+
+/* Buttons */
+.rounded-button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  text-align: center;
+  text-decoration: none;
+  width: 8.5rem;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #5a5a5a;
+  border-radius: 999px;
+  background: transparent;
+  color: #5a5a5a;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  position: relative;
+  z-index: 1;
+  transition:
+    opacity 1s ease-out,
+    color 0.5s ease-out,
+    border-color 0.5s ease-out;
+}
+
+.rounded-button.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Hover effect (animated background overlay) */
+.rounded-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: #f87c74;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity .5s ease-in;
+}
+
+.rounded-button:hover {
+  color: #fff;
+  border-color: transparent;
+}
+
+.rounded-button:hover::before {
+  opacity: 1;
+}
+
+/* Page Transition */
+main {
+  position: fixed;       /* lock it to the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;          /* full screen */
+  transition: transform 2s cubic-bezier(0.8, -.17, 0.85, .66);
+}
+main.page-exit {
+  transform: translateY(-900px); /* moves upward */
+}

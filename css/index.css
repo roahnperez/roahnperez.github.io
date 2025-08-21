@@ -9,9 +9,11 @@
     box-shadow: .25rem .25rem .25rem lightgrey;
     opacity: 1;
     transition: .5s ease;
+    border-radius: 10%;
 }
 
 .projectbuttonimage .typecontainer {
+    border-radius: 10%;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -24,8 +26,18 @@
 }
 
 .projectbuttonimage:hover .typecontainer {
+    border-radius: 10%;
     opacity: 1;
 }
+
+.projectbuttonimage .typecontainer img {
+    border-radius: 10%;
+}
+
+.projectbuttonimage:hover .typecontainer img {
+    border-radius: 10%;
+}
+
 /*End of Project Button CSS */
 
 h1 {
@@ -39,83 +51,18 @@ h1 {
     margin-right: 15%;
 }
 
-/*Start of Fade in Animation*/
-.projecttype {
-    animation: fadeInAnimation ease 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+/* Body entrance transition */
+body {
+  transform: translateY(700vh); /* start below screen */
+  transition: transform 1.5s cubic-bezier(0, .9, 0.15, 1); /* springy bounce */
 }
 
-.one {
-    animation: fadeInAnimation ease 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+body.page-enter {
+  transform: translateY(0); /* slide up into place */
 }
 
-.two {
-    opacity: 0;
-    animation: fadeInAnimation ease 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-delay: .25s;
+body.page-exit {
+  transform: translateY(-200vh); /* move up out of view */
+  transition: transform 1.5s cubic-bezier(0.8, -.17, 0.85, .66);
 }
-
-.three {
-    opacity: 0;
-    animation: fadeInAnimation ease 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-delay: .5s;
-}
-
-.four {
-    opacity: 0;
-    animation: fadeInAnimation ease 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-delay: .75s;
-}
-
-.five {
-    opacity: 0;
-    animation: fadeInAnimation ease 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
-}
-
-.six {
-    opacity: 0;
-    animation: fadeInAnimation ease 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-delay: 1.25s;
-}
-
-.seven {
-    opacity: 0;
-    animation: fadeInAnimation ease 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-delay: 1.50s;
-}
-
-.eight {
-    opacity: 0;
-    animation: fadeInAnimation ease 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-delay: 1.75s;
-}
-
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-/* End of Fade In Animation*/
-
 

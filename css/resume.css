@@ -1,0 +1,91 @@
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .container {
+      margin: none;
+      padding-left: 15%;
+      padding-right: 15%;
+      padding-bottom: 3rem;
+    }
+
+    /* Header */
+    .name h1 {
+      font-family: "Raleway", sans-serif;
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    .name p {
+      font-style: italic;
+      color: #555;
+      margin: 0.3rem 0 2rem;
+    }
+
+    /* Section Titles */
+    h2 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 900;
+      margin-top: 2rem;
+      color: #949494;
+      border-bottom: 2px solid #000000;
+      padding-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Experience / Education items */
+    .experience {
+      margin-top: 1.5rem;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-weight: bold;
+    }
+    .item-subheader {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-style: italic;
+      margin: 0.2rem 0 0.5rem;
+    }
+    .experience ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    /* Skills */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .skills ul {
+      list-style: none;
+      padding: 0;
+    }
+    .skills li::before {
+      content: "+ ";
+      color: #000;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+      .item-header,
+      .item-subheader {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+

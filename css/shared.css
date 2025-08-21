@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
 
+html {
+  overflow-y: scroll;
+}
+
 /* Start Navbar Animation CSS */
 
 .navbar-toggler {
@@ -90,10 +94,22 @@
 
 /* Start of Navbar Decoration */
 
-nav {
-    background-color: rgb(255, 255, 255);    
+nav {  
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
+}
+
+.typechild {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+/* Name in Navbar */
+.typechild {
+    font-family: "Raleway", sans-serif;
+    font-size: 25px;
+    font-weight: 700; 
 }
 
 nav div.container-fluid {
@@ -105,42 +121,76 @@ nav div.container-fluid {
     color: rgb(43, 43, 43);
     display: flex;
     align-items: center;
+    text-decoration: none;
+}
+
+.navbar-brand,
+.navbar-brand:hover,
+.navbar-brand:focus {
+  color: inherit !important;   /* keep same color */
+  text-decoration: none !important; /* remove underline if any */
+}
+
+/* Add space between navbar buttons */
+.navbar-nav {
+    display: flex;
+    gap: 1rem; /* Adjust space between buttons */
+    align-items: center; /* Vertical alignment */
+}
+
+/* Make link text centered inside button */
+.nav-item .nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%; /* Make it fill the nav-item */
+}
+
+.nav-item {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    width: 8rem;
+    height: 3rem;
+    background-color: rgb(240, 240, 240);
+    border: 1.5px solid #5a5a5a;
+    border-radius: 999px;
+    z-index: 1;
+    transition: .5s ease;
+
+    a{
+    color: #5a5a5a;
+    }
+}
+
+.nav-item:hover {
+    background-color: #bebebe;
+    border:1.5px solid transparent;
+    transition: .5s ease;
+    font-weight: 700;
+
+    a{
+    color: white;
+    }
 }
 
 nav img {
     padding-right: 16px;
 }
 
-.typechild {
-    display: inline-block;
-    vertical-align: middle;
-}
-    
-.nav-link {
-    color: rgb(182, 182, 182);
-}
-
-.navbar-brand:hover {
-    text-decoration: none;
-    color: inherit;
-}
-
 .current {
-    color: rgb(43, 43, 43);
+    background-color: #949494;
+    color: white;
     font-weight: 700;
+    border: none !important;
+
+    a {
+    color: white;
+    }
 }
 
-.typechild {
-    font-weight: 560;
-}
-
-.navlink {
-    font-weight: 700;
-}
-
-.current:hover {
-    color: inherit
-}
 
 /* End of Navbar Decoration */
 
@@ -158,37 +208,161 @@ footer {
     color: rgb(138, 138, 138);
 }
 
-/* Start of Nav Hover Animation*/
+/* Start of Page Button Animation*/
 
-.navlink {
+/*Start of Previous Button Animation*/
+.prevbutton {
     position: relative;
-    vertical-align: middle;
     display: inline-block;
     color: rgb(182, 182, 182);
     overflow: hidden;
 }
 
-.navlink {
+.prevbutton {
     /* Same as before */
     background: linear-gradient(to right, rgb(43, 43, 43), rgb(43, 43, 43) 50%, rgb(182, 182, 182) 50%);
 }
 
-.navlink {
+.prevbutton {
     /* Same as before */
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
     background-size: 200% 100%;
     background-position: 100%;
 }
 
-.navlink {
+.prevbutton {
     /* Same as before */
-    transition: background-position 275ms ease;
+    transition: background-position 275ms ease-out;
 }
 
-.navlink:hover {
+.prevbutton:hover {
     background-position: 0 100%;
 }
 
-/* End of Nav Hover Animation*/
+.prevbutton {
+    -webkit-mask: url(../Images/Prev\ Project\ Button.svg);
+    mask: url(../Images/Prev\ Project\ Button.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+.prevbuttontype {
+    opacity: 0;
+}
+/*End of Previous Button Animation*/
+
+/* Start of Next Button Animation*/
+.nextbutton {
+    position: relative;
+    display: inline-block;
+    color: rgb(182, 182, 182);
+    overflow: hidden;
+}
+
+.nextbutton {
+    /* Same as before */
+    background: linear-gradient(to right, rgb(43, 43, 43), rgb(43, 43, 43) 50%, rgb(182, 182, 182) 50%);
+}
+
+.nextbutton {
+    /* Same as before */
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    background-size: 200% 100%;
+    background-position: 100%;
+}
+
+.nextbutton {
+    /* Same as before */
+    transition: background-position 275ms ease-out;
+}
+
+.nextbutton:hover {
+    background-position: 0 100%;
+}
+
+.nextbutton {
+    -webkit-mask: url(../Images/Next\ Project\ Button.svg);
+    mask: url(../Images/Next\ Project\ Button.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: right;
+    mask-position: right;
+}
+
+.nextbuttontype {
+    opacity: 0;
+}
+
+#topButton {
+    width: 3.5rem;
+    height: 3.5rem;
+    transition: opacity 0.35s ease-in-out;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    opacity: 0; 
+    transition: .25s ease-out;
+    border: none;
+    background: none;
+}
+
+#topbuttoncircle {
+    fill: rgb(182, 182, 182);
+    transition: .5s ease;
+}
+
+#topbuttonarrow {
+    fill: white;
+}
+
+#topButton:hover #topbuttoncircle {
+    fill: rgb(43, 43, 43);
+    transition: .5s ease;
+}
+
+  .content {
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.tooltipblock {
+    position: relative;
+    display: inline-block;
+}
+  
+.tooltipblock .tooltiptext {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 10pt;
+    padding-bottom: 1rem;
+    opacity: 0;
+    transition: ease .5s;
+    width: max-content;
+    background-color: rgb(255, 255, 255);
+    color: rgb(43, 43, 43);
+    text-align: center;
+    border-radius: 0;
+    padding: 5px;
+  
+    /* Position the tooltip */
+    position: absolute;
+    top: 110%;
+    left: 10%;
+    z-index: 1;
+}
+  
+.tooltipblock:hover .tooltiptext {
+    opacity: 1;
+}

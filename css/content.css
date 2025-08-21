@@ -1,15 +1,17 @@
 h1 {
-    font-family: 'Raleway', sans-serif; 
-    font-weight: 700;
-    font-size: 35pt;
+    font-family: "Raleway", sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
     padding-bottom: 1rem;
     color: black;
 }
 
 h2 {
-    font-family: 'Raleway', sans-serif; 
-    font-weight: 600;
-    font-size: 16pt;
+    font-family: 'Roboto', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: #666;
+      text-transform: uppercase;
 }
 
 h3 {
@@ -65,7 +67,7 @@ video {
 
 p {
     font-family: 'Roboto', sans-serif;
-    font-size: 10pt;
+      line-height: 1.6;
     padding-bottom: 1rem;
 }
 
@@ -84,79 +86,84 @@ p {
 }
 
 .prototypebutton {
-  font-family: 'Raleway', sans-serif;
-  align-items: center;
-  background-color: rgb(182, 182, 182);
-  border: 0;
-  border-radius: 100px;
-  text-decoration: none;
-  box-sizing: border-box;
-  color: #ffffff;
-  display: inline-flex;
+  font-family: 'Roboto', sans-serif;
+  color: #5a5a5a;
   font-size: 16px;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 20px;
-  max-width: 480px;
-  min-height: 40px;
-  min-width: 0px;
-  padding: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-align: center;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  border: 1.5px solid #5a5a5a;
+  border-radius: 999px;
+  background-color: rgb(240, 240, 240);
+  display: inline-flex;         /* Added inline-flex for text to stay in one line */
+  align-items: center;          /* Vertically centers text inside the button */
+  justify-content: center;      /* Horizontally centers text inside the button */
+  width: auto;          
   transition: .5s ease;
 }
 
 .websitebutton {
-  font-family: 'Raleway', sans-serif;
-  align-items: center;
-  background-color: rgb(182, 182, 182);
-  border: 0;
-  border-radius: 100px;
-  text-decoration: none;
-  box-sizing: border-box;
-  color: #ffffff;
-  display: inline-flex;
+  font-family: 'Roboto', sans-serif;
+  color: #5a5a5a;
   font-size: 16px;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 20px;
-  max-width: 480px;
-  min-height: 40px;
-  min-width: 0px;
-  padding: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-align: center;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  border: 1.5px solid #5a5a5a;
+  border-radius: 999px;
+  background-color: rgb(240, 240, 240);
+  display: inline-flex;         /* Added inline-flex for text to stay in one line */
+  align-items: center;          /* Vertically centers text inside the button */
+  justify-content: center;      /* Horizontally centers text inside the button */
+  width: auto;          
   transition: .5s ease;
 }
 
 .prototypebutton:hover{ 
-  background-color: rgb(43, 43, 43);
+  color: #fff;
+  border: 1.5px solid transparent;
+  background-color: #949494;
+  font-weight: 600;
   transition: .5s ease;
-  color: #ffffff;
 }
 
 .websitebutton:hover{ 
-  background-color: rgb(43, 43, 43);
+  color: #fff;
+  border: 1.5px solid transparent;
+  background-color: #949494;
+  font-weight: 600;
   transition: .5s ease;
-  color: #ffffff;
 }
 
 .videocontainer {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.27198%;
-    padding-right: 4rem;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  margin: 0 0 1rem 0; /* only bottom spacing */
 }
 
 .videocontainer iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;  /* flush to the top */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.projectinfo {
+  display: flex;
+  align-items: flex-start !important; /* forces both columns to align top */
+}
+
+/* remove the extra padding that was pushing the first video */
+.projectvideo .videocontainer {
+  padding-right: 0;
 }
 
 @media only screen and (max-width: 576px) {

@@ -169,3 +169,18 @@ p {
     fill: rgb(43, 43, 43);
     transition: .5s ease;
 }
+
+/* Body entrance transition */
+body {
+  transform: translateY(700vh); /* start below screen */
+  transition: transform 1.5s cubic-bezier(0, .9, 0.15, 1); /* springy bounce */
+}
+
+body.page-enter {
+  transform: translateY(0); /* slide up into place */
+}
+
+body.page-exit {
+  transform: translateY(-200vh); /* move up out of view */
+  transition: transform 1.5s cubic-bezier(0.8, -.17, 0.85, .66);
+}
