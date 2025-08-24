@@ -14,6 +14,7 @@ camera.lookAt(-0.175, 0, 0);
 
 // Renderer
 const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.outputEncoding = THREE.sRGBEncoding;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -54,40 +55,44 @@ function screenYToWorldY(screenY, camera, distance) {
 }
 
 function updateModelLayout() {
-  if (!object || !modelBaseSize) return;
+  if (!object) return;
+
+  if (!modelBaseSize) {
+    object.position.y = 0;
+    return;
+  }
 
   const vw = window.innerWidth;
   const vh = window.innerHeight;
 
-// --- SCALE THE MODEL ---
-const scaleFactor = 1; // base factor
-let responsiveScale = (Math.min(vw, vh) / 800) * (2 / modelBaseSize) * scaleFactor;
+  const scaleFactor = 1;
+  let responsiveScale = (Math.min(vw, vh) / 800) * (2 / modelBaseSize) * scaleFactor;
 
-// Make model slightly smaller on smaller screens
-if (vw < 600) {
-  responsiveScale *= 1.25; // reduce scale by 15% on narrow screens
-} else if (vw < 900) {
-  responsiveScale *= 0.95; // slightly smaller on medium screens
-}
-
-object.scale.setScalar(responsiveScale);
-
-
-  // --- POSITION THE MODEL BETWEEN TOP OF BUTTONS AND TOP OF SCREEN ---
-  const buttonContainer = document.querySelector(".button-container");
-  let buttonsTopPx = vh * 0.5; // fallback if container not found
-  if (buttonContainer) {
-    const rect = buttonContainer.getBoundingClientRect();
-    buttonsTopPx = rect.top;
+  if (vw < 600) {
+    responsiveScale *= 1.25;
+  } else if (vw < 900) {
+    responsiveScale *= 0.95;
   }
 
-  const topScreenPx = 0; // top of screen in pixels
-  const middlePx = (topScreenPx + buttonsTopPx) / 2;
+  object.scale.setScalar(responsiveScale);
 
-  // Distance from camera to pivot
-  const distance = camera.position.distanceTo(pivot.position);
-  object.position.y = screenYToWorldY(middlePx, camera, distance);
+  const buttonContainer = document.querySelector(".button-container");
+
+  if (buttonContainer) {
+    const buttonRect = buttonContainer.getBoundingClientRect();
+    const topOfButtons = buttonRect.top;
+
+    const targetScreenY = topOfButtons / 2;
+
+    // ✅ NEW: Calculate distance to object
+    const modelWorldPos = new THREE.Vector3();
+    object.getWorldPosition(modelWorldPos);
+    const distance = camera.position.distanceTo(modelWorldPos);
+
+    object.position.y = screenYToWorldY(targetScreenY, camera, distance);
+  }
 }
+
 
 
 
@@ -157,15 +162,21 @@ window.addEventListener("resize", () => {
       actionIdle.clampWhenFinished = false;
 
       mixer.addEventListener("finished", () => {
-        actionIdle.reset().play();
-        actionIdle.crossFadeFrom(actionIntro, 1, false);
+  actionIdle.reset().play();
+  actionIdle.crossFadeFrom(actionIntro, 1, false);
 
-        // Show buttons
-        const buttonContainer = document.querySelector(".button-container");
-        const buttons = document.querySelectorAll(".rounded-button");
-        if (buttonContainer) buttonContainer.classList.add("visible");
-        buttons.forEach((btn) => btn.classList.add("visible"));
-      });
+  // Show buttons
+  const buttonContainer = document.querySelector(".button-container");
+  const buttons = document.querySelectorAll(".rounded-button");
+  if (buttonContainer) buttonContainer.classList.add("visible");
+  buttons.forEach((btn) => btn.classList.add("visible"));
+
+  // Wait 1 frame to allow layout to update
+  requestAnimationFrame(() => {
+    updateModelLayout(); // reposition now that buttons are visible
+  });
+});
+
     }
   },
   (xhr) => {
@@ -249,6 +260,7 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("resize", () => {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
+  renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
