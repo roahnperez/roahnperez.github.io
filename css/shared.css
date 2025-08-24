@@ -311,8 +311,7 @@ footer {
 }
 
 #topButton {
-    width: 7vh;
-    height: 7vh;
+    width: 4rem;
     position: fixed;
     bottom: 30px;
     left: 50%; /* move to the center */
