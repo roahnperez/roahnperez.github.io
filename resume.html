@@ -10,23 +10,9 @@
 </head>
 
 <script>
-  window.onload = () => {
-  // Select everything you want animated
-  const elements = document.querySelectorAll(
-    "nav, .name, .experience, .item, .skills, h2"
-  );
-
-  // Wait for everything to load, then animate them in sequence
-  elements.forEach((el, i) => {
-    setTimeout(() => {
-      el.classList.add("enter");
-    }, i * 300); // Stagger by 200ms
-  });
-};
-
-document.body.classList.add("loading");
-
 window.onload = () => {
+  document.body.classList.add("loading");
+
   const elements = document.querySelectorAll(
     "nav, .name, .experience, .item, .skills, h2"
   );
@@ -35,7 +21,7 @@ window.onload = () => {
     setTimeout(() => {
       el.classList.add("enter");
       if (i === elements.length - 1) {
-        document.body.classList.remove("loading"); // Re-enable scrolling when done
+        document.body.classList.remove("loading");
       }
     }, i * 300);
   });
