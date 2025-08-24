@@ -321,6 +321,15 @@ footer {
     border: none;
     background: none;
     transition: opacity 0.35s ease-in-out, transform 0.25s ease-out;
+
+    
+}
+
+@media only screen and (max-width: 768px) {
+
+    #topButton {
+width: 10rem;
+    }
 }
 
 #topbuttoncircle {
